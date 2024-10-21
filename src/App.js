@@ -30,14 +30,14 @@ const chartData = {
   return (
     <div style={{display: 'flex', height: '100vh'}}>
       <div style={{ width: '300px', height: '100vh', padding: '10px'}}>
-        <h1>Dashboard</h1>
+        <h1 style={{ marginDown: '20px'}}>Dashboard</h1>
         
-        <ul>
-          <li style={{ listStyleType: 'none'}}><FaHome/>Dashboards</li>
-          <li style={{ listStyleType: 'none'}}><FaUsers/>Users</li>
-          <li style={{ listStyleType: 'none'}}><FaChartBar/>Analytics</li>
-          <li style={{ listStyleType: 'none'}}><FaShoppingCart/>Orders</li>
-          <li style={{ listStyleType: 'none'}}><FaCog/>Settings</li>
+        <ul style={{ listStyleType: 'none'}}>
+          <li><FaHome style={{ marginRight: '20px'}}/>Dashboards</li>
+          <li><FaUsers style={{ marginRight: '20px'}}/>Users</li>
+          <li><FaChartBar style={{ marginRight: '20px'}}/>Analytics</li>
+          <li><FaShoppingCart style={{ marginRight: '20px'}}/>Orders</li>
+          <li><FaCog style={{ marginRight: '20px'}}/>Settings</li>
         </ul>
       </div>
       
