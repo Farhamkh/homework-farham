@@ -58,7 +58,7 @@ const chartData = {
 
         </Navbar>
 
-      <div style={{ backgroundColor:'rgba(61, 64, 187, 0.14)', overflowY:'auto', marginLeft: '30px', padding: '15px', width: '100%'}}>
+      <div style={{ backgroundColor:'rgba(61, 64, 187, 0.14)', marginLeft: '30px', padding: '15px'}}>
       
           <Card>
             <Card.Body>
@@ -156,8 +156,13 @@ const chartData = {
         
 
       </div>
+      <footer style={{textAlign: 'center'}}>
+        <p style={{padding:'20px'}}> &copy; All Rights Reserved</p>
+      </footer>
       </div>
+      
     </div>
+    
   );
 }
 
