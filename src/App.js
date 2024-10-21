@@ -157,7 +157,7 @@ const chartData = {
 
       </div>
       <footer style={{textAlign: 'center'}}>
-        <p style={{padding:'20px'}}> &copy; All Rights Reserved</p>
+        <p style={{padding:'20px'}}> &copy; {new Date().getFullYear()} Best Company. All Rights Reserved</p>
       </footer>
       </div>
       
