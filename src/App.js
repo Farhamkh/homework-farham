@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap';
+import {Navbar, Nav, Form, FormControl, Button, Row, Col, Card} from 'react-bootstrap';
 import { FaHome, FaUser, FaCog, FaBell, FaEnvelope, FaShoppingCart, FaChartBar, FaUsers, FaSearch} from 'react-icons/fa';
 
 function App() {
@@ -35,6 +35,38 @@ function App() {
           </Nav>
 
         </Navbar>
+
+      
+
+          <Card>
+            <Card.Body>
+              <Card.Title>Total Users</Card.Title>
+              <Card.Text>1,000,000</Card.Text>
+            </Card.Body>
+          </Card>
+          
+          <Card>
+            <Card.Body>
+              <Card.Title>Revenue</Card.Title>
+              <Card.Text>$1,000,000,000</Card.Text>
+            </Card.Body>
+          </Card>
+
+          <Card>
+            <Card.Body>
+              <Card.Title>Orders</Card.Title>
+              <Card.Text>90,000</Card.Text>
+            </Card.Body>
+          </Card>
+
+          <Card>
+            <Card.Body>
+              <Card.Title>Conversion Rate</Card.Title>
+              <Card.Text>5%</Card.Text>
+            </Card.Body>
+          </Card>
+    
+      
 
       </div>
     </div>
