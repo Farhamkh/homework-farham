@@ -1,14 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 import {Navbar, Nav, Form, FormControl, Button, Card, Table, ProgressBar} from 'react-bootstrap';
-import { FaHome, FaUser, FaCog, FaBell, FaShoppingCart, FaChartBar, FaUsers, FaSearch} from 'react-icons/fa';
+import { FaHome, FaUser, FaCog, FaBell, FaShoppingCart, FaBars, FaChartBar, FaUsers, FaSearch} from 'react-icons/fa';
 import { Bar } from 'react-chartjs-2'; 
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, plugins } from 'chart.js';
 import { color } from 'chart.js/helpers';
+import { useState } from 'react';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 function App() {
+
+const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  }
 
 const chartData = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June'], 
@@ -29,6 +36,7 @@ const chartData = {
 
   return (
     <div style={{display: 'flex', height: '100vh'}}>
+      {isSidebarOpen && (
       <div style={{ width: '300px', height: '100vh', padding: '10px'}}>
         <h1 style={{ marginDown: '20px'}}>Dashboard</h1>
         
@@ -39,11 +47,18 @@ const chartData = {
           <li><FaShoppingCart style={{ marginRight: '20px'}}/>Orders</li>
           <li><FaCog style={{ marginRight: '20px'}}/>Settings</li>
         </ul>
+         
       </div>
+      )};
+       
       
       <div style={{flex:1}}>
         <h1>Farham's Dashboard</h1>
+        
         <Navbar>
+        <Button variant="outline-primary" onClick={toggleSidebar}>
+          <FaBars />
+        </Button>
 
           <Form style={{display:'flex', flex:1}}>
           <Button variant="outline-primary"><FaSearch/></Button>
