@@ -25,9 +25,7 @@ const chartData = {
   ]
 };
 
-const chartOptions = {
-  responsive: true
-};
+
 
   return (
     <div style={{display: 'flex', height: '100vh'}}>
@@ -35,16 +33,16 @@ const chartOptions = {
         <h1>Dashboard</h1>
         
         <ul>
-          <li><FaHome/>Dashboards</li>
-          <li><FaUsers/>Users</li>
-          <li><FaChartBar/>Analytics</li>
-          <li><FaShoppingCart/>Orders</li>
-          <li><FaCog/>Settings</li>
+          <li style={{ listStyleType: 'none'}}><FaHome/>Dashboards</li>
+          <li style={{ listStyleType: 'none'}}><FaUsers/>Users</li>
+          <li style={{ listStyleType: 'none'}}><FaChartBar/>Analytics</li>
+          <li style={{ listStyleType: 'none'}}><FaShoppingCart/>Orders</li>
+          <li style={{ listStyleType: 'none'}}><FaCog/>Settings</li>
         </ul>
       </div>
       
       <div style={{flex:1}}>
-        <h1>Farham's React App</h1>
+        <h1>Farham's Dashboard</h1>
         <Navbar>
 
           <Form style={{display:'flex', flex:1}}>
