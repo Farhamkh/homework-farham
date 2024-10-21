@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import {Navbar, Nav} from 'react-bootstrap';
-import { FaHome, FaUser, FaCog, FaBell, FaEnvelope, FaShoppingCart, FaChartBar } from 'react-icons/fa';
+import {Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap';
+import { FaHome, FaUser, FaCog, FaBell, FaEnvelope, FaShoppingCart, FaChartBar, FaUsers, FaSearch} from 'react-icons/fa';
 
 function App() {
   return (
@@ -11,15 +11,31 @@ function App() {
         
         <ul>
           <li><FaHome/>Dashboards</li>
-          <li><FaUser/>Users</li>
+          <li><FaUsers/>Users</li>
           <li><FaChartBar/>Analytics</li>
           <li><FaShoppingCart/>Orders</li>
           <li><FaCog/>Settings</li>
         </ul>
       </div>
 
-      <div style={{marginLeft: '30px', padding: '15px'}}>
-        <h1>Farham's React App</h1>
+      <div style={{ marginLeft: '30px', padding: '15px', width: '100%'}}>
+      <h1>Farham's React App</h1>
+
+        <Navbar>
+
+          <Form style={{display:'flex', flex:1}}>
+          <Button variant="outline-primary"><FaSearch/></Button>
+            <FormControl placeholder="Search Here..." />
+            
+          </Form>
+        
+          <Nav>
+            <Nav.Link><FaBell/></Nav.Link>
+            <Nav.Link><FaUser/></Nav.Link>
+          </Nav>
+
+        </Navbar>
+
       </div>
     </div>
   );
