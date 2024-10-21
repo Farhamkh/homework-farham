@@ -30,8 +30,8 @@ const chartOptions = {
 };
 
   return (
-    <div style={{display: 'flex'}}>
-      <div style={{ width: '250px', height: '1000px', backgroundColor: 'gray', padding: '10px' }}>
+    <div style={{display: 'flex', height: '100vh'}}>
+      <div style={{ width: '300px', height: '100vh', padding: '10px'}}>
         <h1>Dashboard</h1>
         
         <ul>
@@ -42,10 +42,9 @@ const chartOptions = {
           <li><FaCog/>Settings</li>
         </ul>
       </div>
-
-      <div style={{ marginLeft: '30px', padding: '15px', width: '100%'}}>
-      <h1>Farham's React App</h1>
-
+      
+      <div style={{flex:1}}>
+        <h1>Farham's React App</h1>
         <Navbar>
 
           <Form style={{display:'flex', flex:1}}>
@@ -61,8 +60,8 @@ const chartOptions = {
 
         </Navbar>
 
+      <div style={{ backgroundColor:'rgba(61, 64, 187, 0.14)', overflowY:'auto', marginLeft: '30px', padding: '15px', width: '100%'}}>
       
-<div  style={{width:'100%', height:'500px'}}>
           <Card>
             <Card.Body>
               <Card.Title>Total Users</Card.Title>
@@ -156,8 +155,9 @@ const chartOptions = {
               </div>            
             </Card.Body>
           </Card>
-        </div>
+        
 
+      </div>
       </div>
     </div>
   );
