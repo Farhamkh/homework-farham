@@ -2,8 +2,32 @@ import logo from './logo.svg';
 import './App.css';
 import {Navbar, Nav, Form, FormControl, Button, Row, Col, Card} from 'react-bootstrap';
 import { FaHome, FaUser, FaCog, FaBell, FaEnvelope, FaShoppingCart, FaChartBar, FaUsers, FaSearch} from 'react-icons/fa';
+import { Bar } from 'react-chartjs-2'; 
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, plugins } from 'chart.js';
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 function App() {
+
+const chartData = {
+  labels: ['January', 'February', 'March', 'April', 'May', 'June'], 
+  datasets:[
+    {
+      label: 'Monthly Sales',
+      data: [500, 100, 750, 150, 120, 200],
+      backgroundColor: [
+        "rgba(75,192,192,1)",
+      ],
+      borderColor: "black",
+      borderWidth: 2
+    }
+  ]
+};
+
+const chartOptions = {
+  responsive: true
+};
+
   return (
     <div style={{display: 'flex'}}>
       <div style={{ width: '250px', height: '1000px', backgroundColor: 'gray', padding: '10px' }}>
@@ -65,7 +89,13 @@ function App() {
               <Card.Text>5%</Card.Text>
             </Card.Body>
           </Card>
-    
+
+          <Card>
+            <Card.Body>
+              <Card.Title>Sales Overview</Card.Title>
+              <Bar data={chartData} options = {{responsive: true, plugins: { title: { display: true, text: 'Sales for 6 months'}}}}/>
+            </Card.Body>
+          </Card>
       
 
       </div>
