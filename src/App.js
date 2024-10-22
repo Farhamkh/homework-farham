@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {Navbar, Nav, Form, FormControl, Button, Card, Table, ProgressBar} from 'react-bootstrap';
+import {Navbar, Nav, Form, FormControl, Button, Card, Table, ProgressBar,Dropdown} from 'react-bootstrap';
 import { FaHome, FaUser, FaCog, FaBell, FaShoppingCart, FaBars, FaChartBar, FaUsers, FaSearch} from 'react-icons/fa';
 import { Bar } from 'react-chartjs-2'; 
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, plugins } from 'chart.js';
@@ -63,12 +63,25 @@ const chartData = {
           <Form style={{display:'flex', flex:1}}>
           <Button variant="outline-primary"><FaSearch/></Button>
             <FormControl placeholder="Search Here..." />
-            
           </Form>
         
-          <Nav>
+          <Nav >
             <Nav.Link><FaBell/></Nav.Link>
-            <Nav.Link><FaUser/></Nav.Link>
+
+            <Dropdown align="end">
+              
+              <Dropdown.Toggle variant="light-primary" id="dropdown-basic">
+              <FaUser/>
+              </Dropdown.Toggle>
+
+             <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
+              
+             </Dropdown.Menu>
+            
+            </Dropdown>
+            
           </Nav>
 
         </Navbar>
