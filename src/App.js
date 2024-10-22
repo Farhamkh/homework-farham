@@ -36,6 +36,7 @@ const chartData = {
 
   return (
     <div style={{display: 'flex', height: '100vh'}}>
+      
       {isSidebarOpen && (
       <div style={{ width: '300px', height: '100vh', padding: '10px'}}>
         <h1 style={{ marginDown: '20px'}}>Dashboard</h1>
